@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="template2.css">
+  <title>Resume Template 2</title>
+</head>
+<body>
+<body>
+    <div id="resumeTemplate2">
+        <div id="headt2">
+      <h1 id="nameTemplate2"></h1>
+      <p id="professionTemplate2"></p>
+      <p id="contactTemplate2"></p>
+    </div> 
+
+      <h2>Summary</h2>
+      <p id="summaryTemplate2"></p>
+  
+      <h2>Education</h2>
+      <p id="education1Template2"></p>
+      <p id="education2Template2"></p>
+  
+      <div class="skils2">
+        <h2>Skills</h2>
+        <div class="first5">
+        <p id="skills1Template2"></p>
+        <p id="skills2Template2"></p>
+        <p id="skills3Template2"></p>
+        <p id="skills4Template2"></p>
+        <p id="skills5Template2"></p>
+      </div>
+      <div class="last5">
+        <p id="skills6Template2"></p>
+        <p id="skills7Template2"></p>
+        <p id="skills8Template2"></p>
+        <p id="skills9Template2"></p>
+        <p id="skills10Template2"></p>
+      </div>
+  
+      <h2>Projects</h2>
+      <p id="project1Template2"style="margin-bottom: 10px;"></p>
+      <p id="project2Template2"style="margin-bottom: 10px;"></p>
+      <p id="project3Template2"></p>
+  
+      <h2>Certifications</h2>
+      <p id="certification1Template2"></p>
+      <p id="certification2Template2"></p>
+      <p id="certification3Template2"></p>
+      <p id="certification4Template2"></p>
+      <p id="certification5Template2"></p>
+  
+      <h2>References</h2>
+      <p id="referencesTemplate2"></p>
+      <br>
+      <button onclick="downloadResume('template2.html', 'Resume_Template2')">Download Resume</button>
+
+      <script>
+        // Retrieving data from localStorage
+        const resumeData = JSON.parse(localStorage.getItem('resumeData'));
+  
+        if (resumeData) {
+            // personal details
+          document.getElementById("nameTemplate2").innerText = resumeData.name;
+          document.getElementById("professionTemplate2").innerText = resumeData.profession;
+          document.getElementById("contactTemplate2").innerText = `Phone: ${resumeData.phone}, Gmail: ${resumeData.gmail}`;
+          // summary 
+          document.getElementById("summaryTemplate2").innerText = `Summary:\n${resumeData.summary}`;
+          //education
+          document.getElementById("education1Template2").innerText = resumeData.education1;
+          document.getElementById("education2Template2").innerText = resumeData.education2;
+          //skills
+          document.getElementById("skills1Template2").innerText = resumeData.skills1;
+          document.getElementById("skills2Template2").innerText = resumeData.skills2;
+          document.getElementById("skills3Template2").innerText = resumeData.skills3;
+          document.getElementById("skills4Template2").innerText = resumeData.skills4;
+          document.getElementById("skills5Template2").innerText = resumeData.skills5;
+          document.getElementById("skills6Template2").innerText = resumeData.skills6;
+          document.getElementById("skills7Template2").innerText = resumeData.skills7;
+          document.getElementById("skills8Template2").innerText = resumeData.skills8;
+          document.getElementById("skills9Template2").innerText = resumeData.skills9;
+          document.getElementById("skills10Template2").innerText = resumeData.skills10;
+            //project
+          const projectsList1 = document.getElementById("project1Template2");
+          projectsList1.innerHTML = `\n ${resumeData.project1}`;
+          const projectsList2 = document.getElementById("project2Template2");
+          projectsList2.innerHTML = ` ${resumeData.project2}`;
+          const projectsList3 = document.getElementById("project3Template2");
+          projectsList3.innerHTML = ` ${resumeData.project3}`;
+            //certificate
+          document.getElementById("certification1Template2").innerText = resumeData.certification1;
+          document.getElementById("certification2Template2").innerText = resumeData.certification2;
+          document.getElementById("certification3Template2").innerText = resumeData.certification3;
+          document.getElementById("certification4Template2").innerText = resumeData.certification4;
+          document.getElementById("certification5Template2").innerText = resumeData.certification5;
+        //   reference
+          document.getElementById("referencesTemplate2").innerText = resumeData.references;
+        }
+        function downloadResume(template, fileName) {
+                    const content = document.documentElement.outerHTML;
+                    const blob = new Blob([content], { type: 'text/html' });
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(blob);
+                    link.download = `${fileName}.html`;
+                    link.click();
+                }
+      </script>
+    </div>
+  </body>
+  </html>
+  

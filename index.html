@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Resume Generator</title>
+</head>
+<body>
+  <div id="resume">
+    <form id="resumeForm">
+      <div id="header">
+        <h2 id="nameSection">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Your Name" required>
+        </h2>
+        <p id="professionSection">
+          <label for="profession">Profession:</label>
+          <input type="text" id="profession" placeholder="Profession" required>
+        </p>
+        <p id="contactInfoSection">
+          Phone no: <input type="tel" id="phone" placeholder="Your Phone Number" required>
+          Gmail: <input type="email" id="gmail" placeholder="Your Gmail" required>
+        </p>
+      </div>
+
+      <section id="summary">
+        <h2>Summary</h2>
+        <textarea id="summaryText" placeholder="Your summary goes here. Briefly describe your career goals and skills." required></textarea>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <label for="educationDetails1">Education Details 1:</label>
+        <textarea id="educationDetails1" placeholder="Your Education Details go here." required></textarea>
+        <label for="educationDetails2">Education Details 2:</label>
+        <textarea id="educationDetails2" placeholder="Your Education Details go here." required></textarea>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <label for="skillsList1">Skill 1:</label>
+        <textarea id="skillsList1" placeholder="Skill 1" required></textarea>
+        <label for="skillsList2">Skill 2:</label>
+        <textarea id="skillsList2" placeholder="Skill 2" required></textarea>
+        <label for="skillsList3">Skill 3:</label>
+        <textarea id="skillsList3" placeholder="Skill 3" required></textarea>
+        <label for="skillsList4">Skill 4:</label>
+        <textarea id="skillsList4" placeholder="Skill 4" required></textarea>
+        <label for="skillsList5">Skill 5:</label>
+        <textarea id="skillsList5" placeholder="Skill 5" required></textarea>
+        <label for="skillsList6">Skill 6:</label>
+        <textarea id="skillsList6" placeholder="Skill 6" required></textarea>
+        <label for="skillsList7">Skill 7:</label>
+        <textarea id="skillsList7" placeholder="Skill 7" required></textarea>
+        <label for="skillsList8">Skill 8:</label>
+        <textarea id="skillsList8" placeholder="Skill 8" required></textarea>
+        <label for="skillsList9">Skill 9:</label>
+        <textarea id="skillsList9" placeholder="Skill 9" required></textarea>
+        <label for="skillsList10">Skill 10:</label>
+        <textarea id="skillsList10" placeholder="Skill 10" required></textarea>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <label for="projectsList1">Project 1:</label>
+        <textarea id="projectsList1" placeholder="Project 1: Project Details" required></textarea>
+        <label for="projectsList2">Project 2:</label>
+        <textarea id="projectsList2" placeholder="Project 2: Project Details" required></textarea>
+        <label for="projectsList3">Project 3:</label>
+        <textarea id="projectsList3" placeholder="Project 3: Project Details" required></textarea>
+      </section>
+
+      <section id="certifications">
+        <h2>Certifications</h2>
+        <label for="certificationsList1">Certification 1:</label>
+        <textarea id="certificationsList1" placeholder="Certification 1: Certification Details" required></textarea>
+        <label for="certificationsList2">Certification 2:</label>
+        <textarea id="certificationsList2" placeholder="Certification 2: Certification Details" required></textarea>
+        <label for="certificationsList3">Certification 3:</label>
+        <textarea id="certificationsList3" placeholder="Certification 3: Certification Details" required></textarea>
+        <label for="certificationsList4">Certification 4:</label>
+        <textarea id="certificationsList4" placeholder="Certification 4: Certification Details" required></textarea>
+        <label for="certificationsList5">Certification 5:</label>
+        <textarea id="certificationsList5" placeholder="Certification 5: Certification Details" required></textarea>
+      </section>
+
+      <section id="references">
+        <h2>References</h2>
+        <label for="referencesText">References:</label>
+        <textarea id="referencesText" placeholder="References available upon request." required></textarea>
+      </section>
+
+      <label for="template">Select Template:</label>
+      <select id="template" required>
+        <option value="template1.html">White</option>
+        <option value="template2.html">Blue</option>
+      </select>
+
+      <button type="button" onclick="generateResume()">Generate Resume</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

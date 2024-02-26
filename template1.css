@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  #resumeTemplate1 {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  #headt1 {
+    text-align: center;
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  
+  p.details {
+    font-size: 16px;
+    text-align: left;
+    margin: 5px 0;
+  }
+  
+  span {
+    font-weight: bold;
+    color: #009688;
+  }
+  .first5 {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .last5 {
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    margin: 20px auto;
+    display: block;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+button:focus {
+    outline: none;
+}
+  
